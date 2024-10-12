@@ -1,8 +1,9 @@
-# DM Project 24.25 - [WCB | Notebooks]
+# ML Project 24.25 - [WCB | Notebooks]
 Work developed in the Machine Learning project of the Master's in Data Science and Advanced Analytics at NOVA IMS.
 
-> The main goal of this project is .........
-<br>
+> The main goal of this project is develop a multiclass classification model to predict the New York Workers' Compensation Board's decision on injury claims, optimize its performance, and provide additional insights through feature analysis and model improvements.
+
+<br><br>
 
 #### Group 33
 
