@@ -21,7 +21,7 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 
 <p align="center" style="font-size: 40px; font-weight: bold;">Next Steps 🚀</p>
 
-### CRISP-DM
+### **CRISP-DM**
 
 1. **Business Understanding**
 2. **Data Understanding**
@@ -34,7 +34,7 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 
 ---
 
-## Report Rules
+## **Report Rules**
 
 > - A report that describes the analytical processes and the conclusions obtained with, at most , **10 pages** (excluding cover , abstract and annexes) .
 >   - Heading 1: Calibri , Size 14 pt, in bold
@@ -120,17 +120,33 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 > - Description of data received -> key insights
 > - Steps taken to clean and prepare the data
 
-  - **2.1. Data Collection**
-  - **2.2. Data Description**
-  - **2.3. Data Quality**
-  - **2.4. Data Exploration**
-  - **2.5. Data Cleaning**
-  - **2.6. Feature Engineering**
-  - **2.7. Data Transformation**
-  - **2.8. Data Splitting**
-  - **2.9. Feature Selection**
+- **2.2. Data Description**
+- **2.3. Data Quality**
+- **2.4. Data Exploration, Cleaning \& Feature Engineering🟣**
+  - **`Claim Injury Type`** [Target Variable]
+  - **`Accident Date`**, **`Assembly Date`**, **`C-2 Date`**, **`C-3 Date`🔴** and **`First Hearing Date`🔴**
+    - **`C3 Date Binary`** and **`First Hearing Date Binary`** 🟣🟢
+  - **`Age at Injury`🟢** \& **`Birth Year`🔴**
+    - Imputation Strategy for **`Age at Injury`** 🟣
+  - **`Gender`🟢**
+  - **`Alternative Dispute Resolution`**
+  - **`Attorney/Representative`**
+  - **`COVID-19 Indicator`**
+  - **`Average Weekly Wage`**
+    - **`Weekly Wage Reported`** 🟣
+  - **`IME-4 Count`**
+    - **`IME-4 Reported`** 🟣
+  - **`Carrier Name`** & **`Carrier Type`**
+  - **`Industry Code`** & **`Industry Code Description`**
+  - **`WCIO Cause of Injury`** [Code & Description]
+  - **`WCIO Nature of Injury`** [Code & Description]
+  - **`WCIO Part Of Body`** [Code and Description]
+  - **`Number of Dependents`** 🔴
+  - **`Zip Code`**, **`County of Injury`**, **`District Name`** and **`Medical Fee Region`** [Region Information]
+- **2.5. Data Splitting**
+- **2.6. Feature Selection🟢🟡🔴**
 
-### 3. Multiclass Classification
+### 3. Multiclass Classification 🟤⚫
 
 > - Additional preprocessing steps adopted
 > - Feature Selection Strategy
