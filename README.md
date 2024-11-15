@@ -1,18 +1,19 @@
 # ML Project 24.25 - [WCB | Notebooks]
+
 Work developed in the Machine Learning project of the Master's in Data Science and Advanced Analytics at NOVA IMS.
 
-> The main goal of this project is develop a multiclass classification model to predict the New York Workers' Compensation Board's decision on injury claims, optimize its performance, and provide additional insights through feature analysis and model improvements.
+> The main goal of this project is develop a multiclass classification model to predict the New York Workers' Compensation Board's decision on injury claims, optimize its performance, and provide additional insights through feature analysis and model improvements. 
 
 <br>
 
 #### Group 33
 
-  - André Silvestre, 20240502 
-  - João Henriques, 20240499 
-  - Simone Genovese, 20241459 
-  - Steven Carlson, 20240554 
-  - Vinícius Pinto, 20211682 
-  - Zofia Wojcik, 20240654 
+- André Silvestre, 20240502
+- João Henriques, 20240499
+- Simone Genovese, 20241459
+- Steven Carlson, 20240554
+- Vinícius Pinto, 20211682
+- Zofia Wojcik, 20240654
   
 <br>
 
@@ -40,7 +41,7 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 >   - Heading 1: Calibri , Size 14 pt, in bold
 >   - Heading 2 (if needed) : Calibri , Size 13 pt, in bold
 >   - Text: Calibri , Size 11 pt, line spacing of 1.15 pt and paragraph spacing of 6 pt
-> - The body of text should only include Figures and Tables that are essential to understanding your work. Supporting figures and Tables can be added to Annexes. 
+> - The body of text should only include Figures and Tables that are essential to understanding your work. Supporting figures and Tables can be added to Annexes.
 > - Please make sure all figures and Tables ( including the ones in annexes) are identified and referenced in the text . Any figure or table should have an explicit purpose to be included.
 >
 ><p align="center">
@@ -58,16 +59,16 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 >   - Additional Preprocessing: **1v**
 >   - Feature Selection: **1v**
 >   - Modelling approach - model assessment strategy (holdout, cross-validation, etc...) and algorithms (minimum of 5 covered in class) used: **1.5 v**
->  - Performance assessment - rationale for choice of evaluation metric(s) and interpretation of results: **1.5 v**
+> - Performance assessment - rationale for choice of evaluation metric(s) and interpretation of results: **1.5 v**
 > - Model optimization: **1 v**
-> 
+>
 > - **Open-Ended Section (5v):** Describe your strategy for the additional insights objective. This section is separated into different components:
->  - Formulation and Adequacy of the Objectives: **0.5 v**
+> - Formulation and Adequacy of the Objectives: **0.5 v**
 > - Difficulty of tasks: **1.5 v**
 > - Correctness/efficiency of implementation: **1.5 v**
 > - Discussion of results: **1v**
 > - Alignment between results and communicated objectives: **0.5 v**
-> 
+>
 > - **Conclusion (2v):** A good conclusion perfectly summarizes the work done. It draws from the information and questions formulated the introduction and directs the results obtained to address them. Moreover, it also lays out the path ahead, such as discussing the limitations of the work and hinting at what could be done in the future.
 >
 > <br><br>
@@ -109,11 +110,11 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 > - Main goals of the project 
 > - Are there any similar works/applications? What has been done? What did other researchers find? What would you expect your results to be based on their previous findings? 
 
-   - **1.1. Context**
-   - **1.2. Problem Statement**
-   - **1.3. Objectives**
-   - **1.4. Methodology**
-   - **1.5. Structure**
+- **1.1. Context**
+- **1.2. Problem Statement**
+- **1.3. Objectives**
+- **1.4. Methodology**
+- **1.5. Structure**
 
 ### 2. Data Exploration and Prepocessing
 
@@ -126,6 +127,8 @@ Work developed in the Machine Learning project of the Master's in Data Science a
   - **`Claim Injury Type`** [Target Variable]
   - **`Accident Date`**, **`Assembly Date`**, **`C-2 Date`**, **`C-3 Date`🔴** and **`First Hearing Date`🔴**
     - **`C3 Date Binary`** and **`First Hearing Date Binary`** 🟣🟢
+    - **`Days, Weekdays, Months, Years`** 🟣
+    - **`Accident Date Binary`**, **`Assembly Date Binary`** and **`C2 Date Binary`** 🟡
   - **`Age at Injury`🟢** \& **`Birth Year`🔴**
     - Imputation Strategy for **`Age at Injury`** 🟣
   - **`Gender`🟢**
@@ -136,27 +139,70 @@ Work developed in the Machine Learning project of the Master's in Data Science a
     - **`Weekly Wage Reported`** 🟣
   - **`IME-4 Count`**
     - **`IME-4 Reported`** 🟣
-  - **`Carrier Name`** & **`Carrier Type`**
-  - **`Industry Code`** & **`Industry Code Description`**
-  - **`WCIO Cause of Injury`** [Code & Description]
-  - **`WCIO Nature of Injury`** [Code & Description]
-  - **`WCIO Part Of Body`** [Code and Description]
+  - **`Carrier Name`🔴** & **`Carrier Type`🟡**
+    - **`Carrier Type Bucket`** 🟣
+  - **`Industry Code`🟢** & **`Industry Code Description`🔴**
+  - **`WCIO Cause of Injury`** [Code🟡 & Description🔴]
+    - **`WCIO Cause of Injury Bucket`** 🟣
+  - **`WCIO Nature of Injury`** [Code🟡 & Description🔴]
+    - **`WCIO Nature of Injury Bucket`** 🟣
+  - **`WCIO Part Of Body`** [Code🟡 and Description🔴]
+    - **`WCIO Part Of Body Bucket`** 🟣
   - **`Number of Dependents`** 🔴
-  - **`Zip Code`**, **`County of Injury`**, **`District Name`** and **`Medical Fee Region`** [Region Information]
+  - **`Zip Code`** 🔴, **`County of Injury`** 🔴, **`District Name`** and **`Medical Fee Region`** [Region Information]
 - **2.5. Data Splitting**
 - **2.6. Feature Selection🟢🟡🔴**
+
+---
+
+#### Legend
+
+- 🟢: Features that we keep on 1st Approach & Can be used in the model
+- 🟡: Features that we drop on 1st Approach & Can try to use now
+- 🔴: Features that we drop & Cannot be used in the model
+- 🟣: Feature Engineering (Variables that we created or modified)
+
+---
+
+> aaaaa
+
+---
 
 ### 3. Multiclass Classification 🟤⚫
 
 > - Additional preprocessing steps adopted
 > - Feature Selection Strategy
-> - Explanation of model assessment strategy and metrics used 
-> - Comparison of performance between candidate algorithms 
+> - Explanation of model assessment strategy and metrics used
+> - Comparison of performance between candidate algorithms
 > - **Optimization efforts:** presentation, results and discussion
 
 - **3.1. Baseline Model**
+  - Model with all features
 - **3.2. Model Selection**
+  - **`Logistic Regression`**
+  - **`Naive Bayes`**
+    - **`Categorical Naive Bayes`**
+    - **`Gaussian Naive Bayes`**
+  - **`K-Nearest Neighbors (KNN)`**
+    - **`Brute Force KNN`**
+    - ~~**`KD Tree KNN`**~~ [Too much time compared to `Brute Force`]
+    - ~~**`Ball Tree KNN`**~~ [Too much time compared to `Brute Force`]
+  - **`Neural Network [MLPClassifier]`**
+    - *How we will define the parameters?* ⚠️
+  - **`Decision Tree`**
+    - *How we will define the parameters (max_features, min_impurity_decrease, max_depth)?* [GridSearchCV ??] ⚠️
+  - **`Support Vector Machine (SVM)`**
+    - *How we will define the parameters (C, kernel, degree, gamma)?* [GridSearchCV ??] ⚠️
+  - **Ensemble Methods**
+    - **`BaggingClassifier`**
+      - We need to choose the models to use
+    - **`RandomForestClassifier`**
+    - **`AdaBoostClassifier`**
+    - **`Gradient Boosting`**
+
 - **3.3. Hyperparameter Tuning**
+  - **`GridSearchCV`**
+  - **`RandomizedSearchCV`**
 - **3.4. Model Evaluation**
 - **3.5. Model Performance**
 - **3.6. Feature Importance**
@@ -169,22 +215,22 @@ Work developed in the Machine Learning project of the Master's in Data Science a
 > - Description of the actions taken
 > - Results and discussion of main findings
 
-  - **4.1. Variable Importance**
-    - How we did it and what we found
-  - **4.2. Web Application**
-    - Main features and functionalities
+- **4.1. Variable Importance**
+  - How we did it and what we found
+- **4.2. Web Application**
+  - Main features and functionalities
 
 ### 5. Conclusions
 
 > - Summary of initial objectives and discussion of corresponding findings
 > - Do the findings match what you initially expected? How?
-> - Discussion of limitations of your work (e.g. what could you have done differently) 
-> - Suggestions for possible work to fol low on your work. 
+> - Discussion of limitations of your work (e.g. what could you have done differently)
+> - Suggestions for possible work to fol low on your work.
 
-  - **5.1. Summary**
-  - **5.2. Findings**
-  - **5.3. Limitations**
-  - **5.4. Future Work**
+- **5.1. Summary**
+- **5.2. Findings**
+- **5.3. Limitations**
+- **5.4. Future Work**
 
 ### References
 
