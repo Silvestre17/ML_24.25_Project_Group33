@@ -17,6 +17,53 @@ Work developed in the Machine Learning project of the Master's in Data Science a
   
 <br>
 
+---
+
+<p align="center" style="font-size: 40px; font-weight: bold;"> Professor Suggestions 📌</p>
+
+1. **Can we do the split between train validation and test before feature preprocessing**
+  
+> - Yes, you can do the split before the preprocessing. The idea is to avoid **data leakage** from the test set to the training set. However, you should be careful with the preprocessing steps that depend on the data distribution. For example, if you are going to use the mean of a feature to impute missing values, you should calculate the mean only on the training set and use it to impute the missing values in the validation and test sets.
+
+> In this case, we are assume that Cross-Validation method is used is **Hold-out Method**.
+
+2. **Do we need to do all the preprocessing steps inside the cross validation for loop including missing values treatment, scaling and encoding**
+
+> If our approach is to use the **K-Fold Cross-Validation** method, we should do all the preprocessing steps inside the loop. This is because the validation set is different in each iteration, so the preprocessing steps should be done for each fold. However, if we are using the **Hold-out Method**, we can do the preprocessing steps before the loop.
+
+
+i. **If so, how should we proceed in relation to feature selection procedures like RFE, Ridge because to include all features in the process they must be encoded**
+
+> For encoding we can define a dictionary with the encoders and apply them inside the loop. For example, we can define a dictionary with the encoders for each feature type (e.g., one-hot encoding for categorical features and standardization for numerical features) and apply them inside the loop. 
+> For feature selection procedures like RFE and Ridge, we can define the model and the feature selection method inside the loop and apply them to the training set. **[Idea is obtain different features for each fold and see if the model is consistent -> More robust solution]**
+
+3. **Can the encoding be done on the whole dataset? Meaning can we make the fit on the whole data ?**
+
+> We can! 
+
+4. **Feature selection**<br>
+  i. **Three approaches regarding one hot encoded features ii. age has 4 categories -> if 2 are not important what do we do ?**
+     1) Drop the 2 not important features ✅ (We need to treat the class as a feature)
+     2) ~~Drop all of them~~
+     3) ~~Keep all of them~~
+
+5. **Does experimenting with different/random features does it make sense ?**
+
+> He prefers to use simple methods right than complex methods wrong.
+
+6. **When applying scalling for RFE do we apply the scalling for both original categorical (label and OHE) features and numerical features**
+
+> Depend on which CV method we are using. If we are using **Hold-out Method**, we can do the preprocessing steps before the loop. If we are using **K-Fold Cross-Validation**, we should do all the preprocessing steps inside the loop.
+
+
+<br>
+
+> -------
+> ***Extra*** <br>
+> To evaluate Kaggle (2val of the final grade, the other 18 being the report) it will use the range min=sample_submission==0val and max=max_best_group==2val and the grades will be dates based on this range
+
+<br><br>
+
 
 ---
 

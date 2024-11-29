@@ -1,14 +1,12 @@
 /Backups/
-/Machine_Learning_Group33_Report.docx
-/Machine_Learning_Group33_Report.pdf
-/Homework_Group33.docx
-/Homework_Group33.pdf
+/ML_Group33_Report.docx
 /ML_Excel_ReportResults.xlsx
 /data/usa_zip_codes_geo_100m.json
 /data/georef-united-states-of-america-county.geojson
 /data/2ndNotebook/MoreFeatures
 /catboost_info
 /_/General Feedback.pdf
+/4_2&3_FE&Modeling&Evaluation - Advanced Approache_MLProject_Group33.ipynb
 
 # Created by .ignore support plugin (hsz.mobi)
 # Source: https://gist.github.com/MOOOWOOO/3cf91616c9f3bbc3d1339adfc707b08a
@@ -29,3 +27,6 @@ ENV/
 .idea/
 .venv/
 .vscode/
+
+ML_Excel_ReportResults.xlsx
+ML_Group33_Report.docx
