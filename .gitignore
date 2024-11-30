@@ -8,6 +8,10 @@
 /_/General Feedback.pdf
 /4_2&3_FE&Modeling&Evaluation - Advanced Approache_MLProject_Group33.ipynb
 
+# Ignore all files that have more than 100MB
+/data/3rdNotebook/y_train_smote.parquet
+/data/3rdNotebook/X_train_smote.parquet
+
 # Created by .ignore support plugin (hsz.mobi)
 # Source: https://gist.github.com/MOOOWOOO/3cf91616c9f3bbc3d1339adfc707b08a
 ### Python template
