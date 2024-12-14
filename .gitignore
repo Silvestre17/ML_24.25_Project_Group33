@@ -1,3 +1,4 @@
+/__/
 /Backups/
 /ML_Group33_Report.docx
 /ML_Excel_ReportResults.xlsx
@@ -7,7 +8,11 @@
 /catboost_info
 /_/General Feedback.pdf
 /4_2&3_FE&Modeling&Evaluation - Advanced Approache_MLProject_Group33.ipynb
-ML_Excel_ReportResults_Group33.xlsx
+/1stPart_/
+/2ndPart_/
+/HandoutDelivery_11.11.2024/
+/ReportSchemas/
+# ML_Excel_ReportResults_Group33.xlsx
 ML_Group33_FinalReport.docx
 
 # Ignore all files that have more than 100MB
