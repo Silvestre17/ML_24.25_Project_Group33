@@ -8,7 +8,7 @@
 
 ## ✨ Project Overview
 
-This project, completed for the **Machine Learning** course within the **Master's in Data Science and Advanced Analytics** program at **NOVA IMS**, focuses on applying supervised learning techniques to predict the severity of workers' compensation claims handled by the New York Work Compensation Board (NWCB). The primary objective is to develop a **robust multiclass classification model** to predict one of eight possible `Claim Injury Type` categories, aiming to automate and streamline the claim adjudication process, addressing the increasing volume and manual review time.
+This project, completed for the **Machine Learning** course within the **[Master's in Data Science and Advanced Analytics](https://www.novaims.unl.pt/en/education/programs/postgraduate-programs-and-master-degree-programs/master-degree-program-in-data-science-and-advanced-analytics-with-a-specialization-in-data-science/)** program at **NOVA IMS**, focuses on applying supervised learning techniques to predict the severity of workers' compensation claims handled by the New York Work Compensation Board (NWCB). The primary objective is to develop a **robust multiclass classification model** to predict one of eight possible `Claim Injury Type` categories, aiming to automate and streamline the claim adjudication process, addressing the increasing volume and manual review time.
 
 <p align="center">
     <!-- Project Links -->
