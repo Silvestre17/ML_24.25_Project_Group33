@@ -12,7 +12,7 @@ This project, completed for the **Machine Learning** course within the **[Master
 
 <p align="center">
     <!-- Project Links -->
-    <a href="https://github.com/Silvestre17/ML_24.25_Project_Group33"><img src="https://img.shields.io/badge/Project_Repo-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo"></a>
+    <a href="https://github.com/Silvestre17/ML_PredictingWorkersCompensationClaimSeverity_MasterProject"><img src="https://img.shields.io/badge/Project_Repo-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo"></a>
     <a href="https://mlproject-wcb-group33.streamlit.app/"><img src="https://img.shields.io/badge/Live_App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Streamlit App"></a>
     <a href="https://github.com/Silvestre17/ML_WebApp_Group33"><img src="https://img.shields.io/badge/WebApp_Repo-100000?style=for-the-badge&logo=github&logoColor=white" alt="WebApp Repo"></a>
 </p>
